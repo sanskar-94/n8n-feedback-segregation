@@ -31,5 +31,5 @@ A complete automation system using **n8n**, **Google Gemini**, **Slack**, **Airt
 ## 🧑‍💻 Author
 
 **Sanskar Awasthi**  
-Email: sanskarawasthi94@gmail.com  
+Email: sanskarawasthi93@gmail.com  
 GitHub: [sanskar-94](https://github.com/sanskar-94)
