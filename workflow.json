@@ -550,8 +550,8 @@
       "webhookId": "6c36819d-f439-4902-af76-766eecd5ddf4",
       "credentials": {
         "gmailOAuth2": {
-          "id": "DbPQGd1NkxNjPceK",
-          "name": "Gmail account"
+          "id": ""id": "auto_generated_id_placeholder",",
+          "name": "Generic Gmail OAuth"
         }
       }
     }
