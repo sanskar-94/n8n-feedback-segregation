@@ -1,93 +1,111 @@
-Intelligent Feedback Segregation Workflow (n8n + AI)
-An advanced automation pipeline built with n8n, Google Gemini, Slack, Airtable, and Gmail API. This system is designed to intelligently classify and route user feedback, transforming raw user input into actionable insights automatically.
+# Intelligent Feedback Segregation Workflow (n8n + AI)
 
-Problem Statement
-Many organizations struggle with the high volume of user feedback received through forms, emails, and surveys. They often lack the infrastructure to categorize, respond to, and route this feedback in real-time.
+An advanced AI-powered automation pipeline built using n8n, Google Gemini, Slack, Airtable, and the Gmail API. This workflow is designed to intelligently categorize and route incoming user feedback, transforming raw inputs into actionable insights in real time.
 
-This typically results in:
+---
 
-Delays in resolving user complaints
+## Problem Statement
 
-Feature requests getting lost
+Many organizations face challenges in managing the high volume of user feedback received through forms, emails, and surveys. Often, there is no streamlined system in place to categorize, respond to, and route this feedback efficiently.
 
-Positive feedback not reaching the right teams
+Common issues include:
 
-Solution Overview
-This workflow addresses these bottlenecks by integrating AI-based classification, real-time database routing, team collaboration, and automated user communication into a single, seamless process.
+- Delays in responding to user complaints  
+- Feature requests being overlooked  
+- Positive feedback not reaching the relevant teams  
 
-Key Capabilities
-AI Classification: Leverages Google Gemini 1.5 Flash to categorize feedback as:
+---
 
-Complaint
+## Solution Overview
 
-Compliment
+This workflow solves these challenges by integrating AI-driven classification, real-time database storage, internal team collaboration, and automated user communication—all within a single automated system.
 
-Feature Request
+---
 
-Structured Storage in Airtable: Automatically logs feedback in separate tables based on its category. Each record includes: name, email, feedback, and classification.
+## Key Capabilities
 
-Real-Time Slack Notifications: Sends categorized feedback, along with all relevant user information, to the appropriate Slack channels or teams.
+### AI-Based Classification  
+Uses Google Gemini 1.5 Flash to classify feedback into the following categories:
 
-Gmail API Auto-Responses: If a complaint is detected, the user immediately receives a professional email acknowledging their concern.
+- Complaint  
+- Compliment  
+- Feature Request  
 
-Flexible Input Triggers: While it starts with an n8n form, the system can easily adapt to inputs from Google Forms, Microsoft Forms, or any webhook-enabled frontend.
+### Airtable-Based Structured Storage  
+Automatically logs each feedback entry into Airtable with the following fields:
+- Name  
+- Email  
+- Feedback message  
+- Category  
 
-Workflow Lifecycle
-Form Submission: A user submits feedback via an n8n form or an external webhook.
+Each feedback type is stored in its corresponding table for better organization and tracking.
 
-AI Analysis: The feedback content is analyzed and interpreted using Gemini 1.5 Flash.
+### Real-Time Slack Notifications  
+Routes categorized feedback to the appropriate Slack channels along with associated metadata such as name, email, feedback message, and type.
 
-Conditional Routing:
+### Automated Gmail Responses  
+For complaints, the system sends an immediate and professional acknowledgment email via the Gmail API to the user.
 
-Stored in Airtable under the correct category table.
+### Flexible Input Triggers  
+Though designed with an n8n form as the primary input source, this workflow can be extended to support:
+- Google Forms  
+- Microsoft Forms  
+- Any webhook-enabled frontend  
 
-Posted to Slack with metadata (name, email, message, type).
+---
 
-If a complaint, triggers a Gmail auto-response.
+## Workflow Lifecycle
 
-Visual Overview
-Included Assets
-File
+1. **Form Submission**  
+   A user submits feedback through an n8n form or any external webhook-integrated form.
 
-Description
+2. **AI Analysis**  
+   Google Gemini 1.5 Flash processes the feedback to determine its category.
 
-workflow.json
+3. **Conditional Routing**  
+   - Feedback is stored in the corresponding Airtable table  
+   - A Slack notification is sent to the appropriate team or channel  
+   - If the category is "Complaint", a Gmail auto-response is triggered to acknowledge the user  
 
-Full export of the n8n workflow logic
+---
 
-screenshot.png
+## Visual Overview
 
-Visual layout of the automation workflow
+| File             | Description                                 |
+|------------------|---------------------------------------------|
+| `workflow.json`  | Full export of the n8n workflow logic       |
+| `screenshot.png` | Visual layout of the entire workflow        |
 
+---
 
-Export to Sheets
-Tech Stack
-n8n: Self-hosted automation platform
+## Tech Stack
 
-Google Gemini 1.5 Flash: LLM for NLP classification
+- **n8n** – Workflow automation platform (self-hosted)
+- **Google Gemini 1.5 Flash** – Large Language Model (LLM) for natural language classification
+- **Airtable** – Structured, category-based feedback storage
+- **Slack** – Internal communication and notifications
+- **Gmail API** – Automated responses for complaint submissions
 
-Airtable: Categorical data storage
+---
 
-Slack: Internal team alerts
+## Ideal Use Cases
 
-Gmail API: Transactional responses
+- SaaS startups automating feedback processing at scale  
+- Product teams managing and prioritizing feature requests  
+- Customer support teams ensuring immediate complaint acknowledgment  
+- Organizations scaling Customer Experience (CX) using AI and automation  
 
-Ideal Use Cases
-SaaS startups automating user feedback intake
+---
 
-Product teams streamlining feature tracking
+## Author
 
-Customer support teams requiring immediate complaint acknowledgment
+**Sanskar Awasthi**  
+Email: [sanskarawasthi93@gmail.com](mailto:sanskarawasthi93@gmail.com)  
+GitHub: [@sanskar-94](https://github.com/sanskar-94)  
+Upwork: [https://www.upwork.com/freelancers/~015a6baf82356aebbe](https://www.upwork.com/freelancers/~015a6baf82356aebbe)
 
-Businesses scaling up Customer Experience (CX) automation with AI tools
+---
 
-Author
-Sanskar Awasthi
+## Support
 
-Email: sanskarawasthi93@gmail.com
-
-GitHub: @sanskar-94
-
-Upwork: https://www.upwork.com/freelancers/~015a6baf82356aebbe
-
-⭐ If this project helped you or inspired an idea, feel free to star the repo or connect with me for collaborations!
+If you found this project valuable or would like to collaborate, feel free to star the repository or reach out directly.
